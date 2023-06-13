@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breakout</title>
+    <meta content="Conrado Verzini y Joao Klein" name="author">
+    <meta content="El clasico juego Breakout de Atari" name="description">
+    <meta content="Breakout, Atari" name="palabras-principales">
+    <link href="styles/images/favicon.ico" rel="icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="styles/interface.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<header>
+    <div id="black" class="header">
+        <h1>BREAKOUT</h1>
+    </div>
+    <div id="fuchsia" class="header"></div>
+    <div id="red" class="header"></div>
+    <div id="orange" class="header"></div>
+    <div id="yellow" class="header"></div>
+    <div id="green" class="header"></div>
+    <div id="purple" class="header"></div>
+</header>
+<main class="game">
+    <div class="wall" id="left_wall">
+        <div class="brick_row">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="half_brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="half_brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="half_brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="half_brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="half_brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="half_brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="half_brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="half_brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="half_brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="half_brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="half_brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="half_brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+        </div>
+    </div>
+    <canvas id="screen">
+        Tu browser no soporta el canvas de html5
+    </canvas>
+    <div class="wall" id="right_wall">
+        <table class="status">
+            <caption>STATUS</caption>
+            <tbody>
+            <tr>
+                <th><p>PUNTOS: </p></th>
+                <th><p id="puntos">000</p></th>
+            </tr>
+            <tr>
+                <th><p>VIDAS: </p></th>
+                <th><p id="vidas">000</p></th>
+            </tr>
+            <tr>
+                <th><p>NIVEL:</p></th>
+                <th><p id="nivel">000</p></th>
+            </tr>
+            </tbody>
+        </table>
+        <div class="brick_row">
+            <div class="half_brick"></div>
+            <div class="brick"></div>
+            <div class="empty_brick"></div>
+            <div class="brick"></div>
+            <div class="empty_brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="brick"></div>
+            <div class="empty_brick"></div>
+            <div class="brick"></div>
+            <div class="empty_brick"></div>
+            <div class="half_brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="half_brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="half_brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="half_brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="half_brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="half_brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+        </div>
+        <div class="brick_row">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="half_brick"></div>
+        </div>
+    </div>
+</main>
+<div class="spacer">.</div>
+<footer>
+    <a href="index.html">
+        <button class="boton">MENU</button>
+    </a>
+    <div id="iniciar">
+        <button type="button" class="boton" onclick="juego();ocultarBoton();">INICIAR</button>
+    </div>
+    <img id="logo" src="styles/images/atari_logo.png" alt="Logo de Atari">
+</footer>
+</body>
+
+</html>

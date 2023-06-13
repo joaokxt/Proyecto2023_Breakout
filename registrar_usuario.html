@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breakout</title>
+    <meta content="Conrado Verzini y Joao Klein" name="author">
+    <meta content="El clasico juego Breakout de Atari" name="description">
+    <meta content="Breakout, Atari" name="palabras-principales">
+    <link href="styles/images/favicon.ico" rel="icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="styles/interface.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<header>
+    <div id="black" class="header">
+        <h1>USUARIO</h1>
+    </div>
+    <div id="fuchsia" class="header">
+        <h2>Primero, creemos tu usuario</h2>
+    </div>
+    <div id="red" class="header"></div>
+    <div id="orange" class="header"></div>
+    <div id="yellow" class="header"></div>
+    <div id="green" class="header"></div>
+    <div id="purple" class="header"></div>
+</header>
+<main class="formulario">
+    <!--RECORDAR PONER ATRIBUTOS PARA EL FORMULARIO PARA JS-->
+    <form>
+        <fieldset>
+            <legend>Datos</legend>
+            <table>
+                <caption>Datos</caption>
+                <tr>
+                    <th><label for="nickname">Nickname: </label></th>
+                    <th><input type="text" name="Nickname" id="nickname"></th>
+                </tr>
+                <tr>
+                    <th><label for="mail">E-mail: </label></th>
+                    <th><input type="email" name="E-mail" id="mail"></th>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Experiencia</legend>
+            <input type="radio" name="experiencia" id="novato" value="novato">
+            <label for="novato">Primera vez jugando</label>
+            <input type="radio" name="experiencia" id="experimentado" value="experimentado">
+            <label for="experimentado">Soy buenisimo</label>
+        </fieldset>
+        <fieldset>
+            <legend>Selecciona el modo</legend>
+            <label for="dificultad">Dificultad: </label>
+            <select name="dificultad" id="dificultad">
+                <option value="Fácil">Fácil</option>
+                <option value="Regular">Regular</option>
+                <option value="Difícil">Difícil</option>
+            </select>
+        </fieldset>
+        <button class="boton" type="button" onclick="enviarFormulario()"><em>EMPEZAR</em></button>
+    </form>
+</main>
+<div class="spacer">.</div>
+<footer>
+    <a href="index.html">
+        <button class="boton">VOLVER</button>
+    </a>
+    <img id="logo" src="styles/images/atari_logo.png" alt="Logo de Atari">
+</footer>
+</body>
+
+</html>

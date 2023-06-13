@@ -1,0 +1,402 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 720px;
+    min-width: 1280px;
+    background-color: #383737;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-items: center;
+}
+
+caption {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+}
+
+header {
+    height: 30%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+header div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #000000;
+}
+
+footer {
+    background-color: #000000;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    color: #ffffff;
+}
+
+#black {
+    background-color: #000000;
+    height: 50%;
+    margin-top: 0;
+}
+
+#black h1 {
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    font-size: 5vh;
+}
+
+#black p {
+    color: #ffffff;
+}
+
+#fuchsia {
+    background-color: #9A1B9C;
+    height: 20%;
+}
+
+@keyframes animacion_texto {
+    0% {
+        color: #ffffff;
+    }
+    25% {
+        color: #e3ff00;
+    }
+    50% {
+        color: #967cbe;
+    }
+    75%{
+        color: #28eab2;
+    }
+    100%{
+        color: #1bff00;
+    }
+}
+
+#fuchsia h2 {
+    text-align: center;
+    margin: 0;
+    flex: 1;
+    font-size: 1.5vh;
+    animation: animacion_texto;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+#red {
+    background-color: #B41C1C;
+    height: 15%;
+}
+
+#orange {
+    background-color: #DC972F;
+    height: 8%;
+}
+
+#yellow {
+    background-color: #F1E041;
+    height: 4%;
+}
+
+#green {
+    background-color: #6FF141;
+    height: 1.5%;
+}
+
+#purple {
+    background-color: #7D53F5;
+    height: 1.5%;
+}
+
+#logo {
+    margin-left: auto;
+    width: auto;
+    height: 100%;
+    top: 0;
+}
+
+#copyright {
+    padding: 1em;
+    margin-left: 4px;
+}
+
+.blocks {
+    margin-top: 2.5vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.line {
+    margin-top: 1vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.line div {
+    width: 10.5em;
+    min-width: 60px;
+    height: 2em;
+    min-height: 20px;
+    margin-left: 2vw;
+}
+
+.purple_rectangle {
+    background-image: linear-gradient(#ad10d7, #7a0896);
+}
+
+.blue_rectangle {
+    background-image: linear-gradient(#5555d0, #373780);
+}
+
+.green_rectangle {
+    background-image: linear-gradient(#55c955, #348134);
+}
+
+.rectangle {
+    background-color: #383737;
+}
+
+.boton {
+    width: 10.5em;
+    height: 2em;
+    min-height: 20px;
+    margin-left: 2vw;
+    background-image: linear-gradient(#e5e532, #abab20);
+    font-size: 1em;
+    min-font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    color: #000000;
+}
+
+.boton:hover {
+    animation: animacion;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacion {
+    0% {
+        width: 10.5em;
+        height: 2em;
+    }
+    50% {
+        width: 11.5em;
+        height: 3em;
+    }
+    100% {
+        width: 10.5em;
+        height: 2em;
+    }
+}
+
+.line_pelota {
+    margin-top: 15vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pelota {
+    background-image: linear-gradient(#ffffff, #73736a);
+    width: 2.5em;
+    height: 2.5em;
+    margin-right: 45%;
+    border-radius: 50%;
+}
+
+.line_paleta {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+}
+
+.paleta {
+    background-image: linear-gradient(#ffffff, #73736a);
+    width: 15%;
+    height: 1.5em;
+}
+
+.texto {
+    margin-left: 20vw;
+    max-width: 60vw;
+    text-align: center;
+    color: #ffffff;
+}
+
+.texto p {
+    font-size: 0.7em;
+    line-height: 2.4;
+    margin-bottom: 1vw;
+}
+
+.controles {
+    padding-top: 2vw;
+    margin-bottom: 5vw;
+    margin-left: 20vw;
+    max-width: 60vw;
+    text-align: center;
+    color: #ffffff;
+}
+
+.controles img {
+    width: 20vw;
+    height: auto;
+}
+
+.spacer {
+    height: 14%;
+    visibility: hidden;
+}
+
+#acerca_de {
+    margin-left: 5vw;
+    padding-top: 2vw;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 10vh;
+}
+
+.portrait {
+    height: 10em;
+    width: 8em;
+    min-height: 100px;
+    min-width: 80px;
+    padding-right: 20px;
+}
+
+.gallery {
+    padding-left: 5vw;
+    margin-top: 4vh;
+    margin-bottom: 10vh;
+}
+caption{
+    font-size: 1em;
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+}
+.formulario {
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50vh;
+    font-size: 1em;
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+}
+
+fieldset {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    margin-bottom: 2vh;
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.wall {
+    width: 20%;
+    height: 100%;
+    min-width: 116px;
+    background-color: #954B0C;
+    padding: 2vh 0.25vw 0.25vw 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #ffffff;
+}
+
+.brick_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: 6.25%;
+    margin-bottom: 1.5vh;
+}
+
+.brick {
+    background-image: linear-gradient(#400E03, #5b1506);
+    height: 100%;
+    width: 18%;
+    margin-left: 0.5vw;
+}
+
+.half_brick {
+    background-image: linear-gradient(#400E03, #5b1506);
+    height: 100%;
+    width: 12%;
+    margin-left: 0.5vw;
+}
+
+.empty_brick {
+    background-color: #954B0C;
+    height: 100%;
+    width: 12%;
+    margin-left: 0.5vw;
+}
+
+.status {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000;
+    margin-bottom: 4px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#screen {
+    width: 60%;
+    height: 100%;
+}
+
